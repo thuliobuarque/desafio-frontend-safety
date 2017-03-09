@@ -16,7 +16,7 @@ Repare que o fundo da imagem muda de acordo com o clima do dia (se a previsão f
 
 
 #Instruções
-* Para participar do desafio o canidato deverá fazer um FORK do projeto e enviar seu PR somente quando considerar seu projeto finalizado
+* Para participar do desafio o candidato deverá fazer um FORK do projeto e enviar seu PR somente quando considerar seu projeto finalizado
 * O prazo para entrega do teste será até segunda-feira, dia 13, às 23:59
 * O horário considerado como entregue será o de envio do PR
 * Preocupe-se com a qualidade do código
