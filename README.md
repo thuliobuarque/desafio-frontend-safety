@@ -17,7 +17,7 @@ Repare que o fundo da imagem muda de acordo com o clima do dia (se a previsão f
 
 #Instruções
 * Para participar do desafio o candidato deverá fazer um FORK do projeto e enviar seu PR somente quando considerar seu projeto finalizado
-* O prazo para entrega do teste será até segunda-feira, dia 14, às 23:59
+* O prazo para entrega do teste será até terça-feira, dia 14, às 23:59
 * O horário considerado como entregue será o de envio do PR
 * Preocupe-se com a qualidade do código
 * Será considerado um plus a aplicação do candidato estar hospedada no Heroku
