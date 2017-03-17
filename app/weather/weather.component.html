@@ -1,0 +1,135 @@
+<div class="hero" [ngStyle]="{'background-image':'url(' + photo + ')'}" style="background-size: 100%;">
+	<div class="container">
+		<form action="#" class="find-location">
+			<input #term (keyup)="search(term.value)" type="text" placeholder="Digite o nome da cidade...">
+
+			 <!--<input type="submit" value="Procurar">-->
+
+		</form>
+	</div>
+
+<!-- COMEÇO DA TABELA -->
+<div class="forecast-table">
+	<div class="container" *ngIf="isVisible">
+		<div class="forecast-container">
+			<!-- COMEÇO DO FORECAST 0 -->
+			<div class="today forecast">
+				<div class="forecast-header">
+					<div class="day">{{ items.query?.results?.channel?.item?.forecast[0].day }}</div>
+					<div class="date">{{ items.query?.results?.channel?.item?.condition?.date }}</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="location">{{ items.query?.results?.channel?.location?.city }}, {{ items.query?.results?.channel?.location?.region }}, {{ items.query?.results?.channel?.location?.country }}</div>
+					<div class="degree">
+						<div class="num"><img src="assets/images/icon-up.png" alt="">{{ items.query?.results?.channel?.item?.forecast[0].high }}<sup>o</sup>c</div>
+						<small><img src="assets/images/icon-down.png" alt="">{{ items.query?.results?.channel?.item?.forecast[0].low }}<sup>o</sup>c</small>
+						<div class="forecast-icon">
+								<img alt="" src="assets/images/icons/icon-{{items.query?.results?.channel?.item?.forecast[0].code}}.svg" width=48/>
+
+						</div>
+					</div>
+					<span><img src="assets/images/icon-wind.png" alt="">{{ items.query?.results?.channel?.wind?.speed }} km/h</span>
+
+				</div>
+			</div>
+			<!-- FIM DO FORECAST 0 -->
+			<!-- COMEÇO DO FORECAST 1 -->
+			<div class="forecast">
+				<div class="forecast-header">
+					<div class="day">{{ items.query?.results?.channel?.item?.forecast[1].day }}</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="forecast-icon">
+							<img alt="" src="assets/images/icons/icon-{{items.query?.results?.channel?.item?.forecast[1].code}}.svg" width=48/>
+					</div>
+					<div class="degree">
+          <div class="num"><img src="assets/images/icon-up.png" alt="">{{ items.query?.results?.channel?.item?.forecast[1].high }}<sup>o</sup>c</div>
+						<small><img src="assets/images/icon-down.png" alt="">{{ items.query?.results?.channel?.item?.forecast[1].low }}<sup>o</sup>c</small>
+					</div>
+				</div>
+			</div>
+			<!-- FIM DO FORECAST 1 -->
+			<!-- COMEÇO DO FORECAST 2 -->
+			<div class="forecast">
+				<div class="forecast-header">
+					<div class="day">{{ items.query?.results?.channel?.item?.forecast[2].day }}</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="forecast-icon">
+							<img alt="" src="assets/images/icons/icon-{{items.query?.results?.channel?.item?.forecast[2].code}}.svg" width=48/>
+					</div>
+					<div class="degree">
+					<div class="num"><img src="assets/images/icon-up.png" alt="">{{ items.query?.results?.channel?.item?.forecast[2].high }}<sup>o</sup>c</div>
+						<small><img src="assets/images/icon-down.png" alt="">{{ items.query?.results?.channel?.item?.forecast[2].low }}<sup>o</sup>c</small>
+					</div>
+				</div>
+			</div>
+			<!-- FIM DO FORECAST 2 -->
+			<!-- COMEÇO DO FORECAST 3 -->
+			<div class="forecast">
+				<div class="forecast-header">
+					<div class="day">{{ items.query?.results?.channel?.item?.forecast[3].day }}</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="forecast-icon">
+							<img alt="" src="assets/images/icons/icon-{{items.query?.results?.channel?.item?.forecast[3].code}}.svg" width=48/>
+					</div>
+					<div class="degree">
+						<div class="num"><img src="assets/images/icon-up.png" alt="">{{ items.query?.results?.channel?.item?.forecast[3].high }}<sup>o</sup>c</div>
+							<small><img src="assets/images/icon-down.png" alt="">{{ items.query?.results?.channel?.item?.forecast[3].low }}<sup>o</sup>c</small>
+						</div>
+				</div>
+			</div>
+			<!-- FIM DO FORECAST 3 -->
+			<!-- COMEÇO DO FORECAST 4 -->
+			<div class="forecast">
+				<div class="forecast-header">
+					<div class="day">{{ items.query?.results?.channel?.item?.forecast[4].day }}</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="forecast-icon">
+							<img alt="" src="assets/images/icons/icon-{{items.query?.results?.channel?.item?.forecast[4].code}}.svg" width=48/>
+					</div>
+					<div class="degree">
+						<div class="num"><img src="assets/images/icon-up.png" alt="">{{ items.query?.results?.channel?.item?.forecast[4].high }}<sup>o</sup>c</div>
+							<small><img src="assets/images/icon-down.png" alt="">{{ items.query?.results?.channel?.item?.forecast[4].low }}<sup>o</sup>c</small>
+						</div>
+				</div>
+			</div>
+			<!-- FIM DO FORECAST 4 -->
+			<!-- COMEÇO DO FORECAST 5 -->
+			<div class="forecast">
+				<div class="forecast-header">
+					<div class="day">{{ items.query?.results?.channel?.item?.forecast[5].day }}</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="forecast-icon">
+							<img alt="" src="assets/images/icons/icon-{{items.query?.results?.channel?.item?.forecast[5].code}}.svg" width=48/>
+					</div>
+					<div class="degree">
+						<div class="num"><img src="assets/images/icon-up.png" alt="">{{ items.query?.results?.channel?.item?.forecast[5].high }}<sup>o</sup>c</div>
+							<small><img src="assets/images/icon-down.png" alt="">{{ items.query?.results?.channel?.item?.forecast[5].low }}<sup>o</sup>c</small>
+						</div>
+				</div>
+			</div>
+			<!-- FIM DO FORECAST 5 -->
+			<!-- COMEÇO DO FORECAST 6 -->
+			<div class="forecast">
+				<div class="forecast-header">
+					<div class="day">{{ items.query?.results?.channel?.item?.forecast[6].day }}</div>
+				</div> <!-- .forecast-header -->
+				<div class="forecast-content">
+					<div class="forecast-icon">
+							<img alt="" src="assets/images/icons/icon-{{items.query?.results?.channel?.item?.forecast[6].code}}.svg" width=48/>
+					</div>
+					<div class="degree">
+						<div class="num"><img src="assets/images/icon-up.png" alt="">{{ items.query?.results?.channel?.item?.forecast[6].high }}<sup>o</sup>c</div>
+							<small><img src="assets/images/icon-down.png" alt="">{{ items.query?.results?.channel?.item?.forecast[6].low }}<sup>o</sup>c</small>
+						</div>
+				</div>
+			</div>
+			<!-- FIM DO FORECAST 6 -->
+		</div>
+	</div>
+</div>
+</div>
